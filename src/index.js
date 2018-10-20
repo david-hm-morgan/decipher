@@ -121,45 +121,41 @@ QCDP TIQDNT JKTNLQDJI HRPQ OT FTKQ PTYNTQ. ZDNPQ ZNJH JRN TITHDTP, ORQ PTYJIA, L
 
 let translation2000 = {};
 // TODO update with code
-translation2000.A = "D"; // confidence from L&C
+translation2000.A = "D";
+translation2000.B = "G";
+translation2000.C = "H";
 translation2000.D = "I";
+translation2000.E = "J";
+translation2000.F = "K";
+translation2000.G = "L";
+translation2000.H = "M";
 translation2000.I = "N";
 translation2000.J = "O";
+translation2000.K = "P";
 translation2000.L = "A";
+translation2000.M = "Q";
 translation2000.N = "R";
+translation2000.O = "B";
 translation2000.P = "S";
+translation2000.Q = "T";
+translation2000.R = "U";
+translation2000.S = "V";
+translation2000.T = "E";
+translation2000.U = "W";
+translation2000.V = "_";//////
+translation2000.W = "Y";
+translation2000.X = "_";/////
+translation2000.Y = "C";
 translation2000.Z = "F";
+
+// punctuation
 translation2000["'"] = "'";
 translation2000[","] = ",";
 translation2000["."] = ".\n";
 translation2000["!"] = "!";
 translation2000["?"] = "?";
 translation2000["’"] = "’";
-// JZZDYT
-// OFFICE
 
-// ZJNTDBI
-// FOREIGN
-
-translation2000.C = "_";
-translation2000.E = "_";
-translation2000.F = "_";
-translation2000.G = "_";
-translation2000.H = "_";
-translation2000.K = "_";
-translation2000.M = "_";
-translation2000.O = "_";
-translation2000.R = "_";
-translation2000.S = "_";
-translation2000.U = "_";
-translation2000.V = "_";
-translation2000.W = "_";
-translation2000.X = "_";
-translation2000.Q = "_"; // we thought S but no
-
-translation2000.Y = "_"; //C?
-translation2000.B = "_"; //G?
-translation2000.T = "_"; //E?
 
 // ..r .a..ts. it ri..s, .if. in .otson it d..., ..s nos d... .no... so ..rt.ad. .. s.as .or.in. for ..r .o..d .. .ors. s.. rit._._ ..s of .o.rt. t.. .ad
 // an ant..r for s.as_._ t.. .oins.d o.s s.as r.s.rnin. so s.. .nis.d tsas.t .arri.d ist o.n rit.t_._  i .ad ...s ..t..f a..t.d for s.. .ats f.. ..art t..arasin. s.. .r..d. and ..na. fro. s..ir .on.. .. a .ari.s. of ..ant, nos a.. of s... .nsir... a..ro..d .. s.. .a._._ i .at ..fs .ond.rin. .o. s.. ....n .n.. a.o.s s.as, and ...s..r .. .o.tin .ad ...n intsr..s.d so s... s.. f.d.ra. .art.a..t a.o.s .. a.si.isi.t_._ dit.r.sion t....d s.. .it. .o.rt., and an..a., .o. ofs.n do .o. ..s a .o. off.r fro. a ....n?  ..ar..t .at don. a ts.r.in. .o. d....o.in. a n.s.or. of a..nst and .it ins...i..n.. o..rasiont .a.. ...o.. a ... .ars of .risit. di..o.a.._._ s.. .ro.in. intsa.i.is. a.rott ..ro.. s.r.as.nt s.. ...ir., and is it ..r .a..ts.’t ...i.f s.as .. .i.. n..d so r.t.ond in .ind so d.tsa.i.it. o.r .n..i.t ..for. s... .ro. soo tsron._._ s.it it a n.. and dan..ro.t .ind of .arfar., ..s .o..d, i t...ot., ta.. .i..t, and .. .i.., in an. .at., n..d
