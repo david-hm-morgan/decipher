@@ -1,37 +1,44 @@
 function firstCodeTranslation() {
     let translation = {};
-    translation.A = "S";
-    translation.B = "_";
-    translation.C = "_";
-    translation.D = "_";
-    translation.E = "_";
-    translation.F = "_";
-    translation.G = "_";
-    translation.H = "_";
-    translation.I = "_";
-    translation.J = "_";
-    translation.K = "_";
-    translation.L = "_";
-    translation.M = "_";
-    translation.N = "_";
-    translation.O = "_";
-    translation.P = "_";
-    translation.Q = "_";
-    translation.R = "_";
-    translation.S = "_";
-    translation.T = "_";
-    translation.U = "_";
-    translation.V = "_";
-    translation.W = "_";
-    translation.X = "_";
-    translation.Y = "_";
-    translation.Z = "_";
+    translation.A = "T";
+    translation.B = "U";
+    translation.C = "V";
+    translation.D = "W";
+    translation.E = "X";
+    translation.F = "Y";
+    translation.G = "Z";
+    translation.H = "A";
+    translation.I = "B";
+    translation.J = "C";
+    translation.K = "D";
+    translation.L = "E";
+    translation.M = "F";
+    translation.N = "G";
+    translation.O = "H";
+    translation.P = "I"; // A or I
+
+    translation.Q = "J";
+
+    translation.R = "K";
+
+    translation.S = "L";
+    translation.T = "M";
+    translation.U = "N";
+
+    translation.V = "O";
+
+    translation.W = "P";
+    translation.X = "Q";
+    translation.Y = "R";
+    translation.Z = "S";
     translation[" "] = " ";
     translation["?"] = "?";
     translation["."] = ".";
     translation[":"] = ":";
     translation["’"] = "’";
     translation[","] = ",";
+
+    // o or s is wrong cos we can't have a word o_s
 
     return translation;
 }
@@ -53,6 +60,8 @@ function encode(xStringToTranslate) {
 
 function decode(xStringToTranslate, key) {
     let decodedString = "";
+
+    // key.push(punctuationTranslation());
 
     for (var num=0; num < 10; num++) {
         if (key[`${num}`]) {
