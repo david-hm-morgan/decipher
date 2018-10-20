@@ -1,6 +1,5 @@
-let translation = {};
-
 function firstCodeTranslation() {
+    let translation = {};
     translation.A = "B";
     translation.B = "C";
     translation.C = "D";
@@ -29,9 +28,11 @@ function firstCodeTranslation() {
     translation.Z = "A";
     translation[" "] = " ";
     translation["?"] = "?";
-}
 
-let stringToTranslate20181019 = "FTNPTQP RDF TGOBTLFKX HPPQ IYDI B FYTLKM HQTR DGTLI MTLVKDF GKDJH GLI B RDF KPSI RTQMPCBQV RYDI YP YDM IT MT RBIY IYP FYDMTR DCJYBOP. B STLQM FTNP ICDJPF TS YBN BQ GTFITQ QPRFWDWPC JKBWWBQVF SCTN IYP WPCBTM. IYP FITCBPF FITWWPM BQ 1873, DCTLQM IYP MDIP TS IYP KPIIPCF GPIRPPQ OBJITCBD DQM FBC JYDCKPF, FT B DFFLNP YP CPILCQPM IT PQVKDQM IYPQ, GLI B JTLKMQ’I SBQM DQX CPJTCM TS YBN BQ IYP BNNBVCDIBTQ SBKPF DQM IYPCP RDF QTIYBQV BQ IYP TSSBJBDK CPJTCM IT FLVVPFI IYDI YP NPI RBIY FBC JYDCKPF, KPI DKTQP RBIY YPC NDEPFIX. IYP ICDBK YDM VTQP JTKM DQM B NBVYI YDOP NTOPM TQ DI IYDI WTBQI, GLI IYPQ B VTI IYP IYBCM PNDBK. IYBF IBNP BI RDF D HPXRTCM JBWYPC DQM BI ITTH D KBIIKP KTQVPC IT GCPDH, IYTLVY IYP RTCM FICLJILCP YPKWPM D KTI. BI JTQSBCNPM POPCXIYBQV B YDM VLPFFPM FT SDC DGTLI GKDJH, DQM CDBFPM D RYTKP KTDM TS QPR ZLPFIBTQF! BI DKFT FLVVPFIPM IYDI B NBVYI SBQM DQFRPCF BQ IYP FYDMTR DCJYBOP, GLI SBCFI B YDM IT SBVLCP TLI RYPCP BI RDF, DQM YTR B JTLKM VPI BQ. B FIBKK JDQ’I GPKBPOP BI, GLI IYP DQFRPC JDNP SCTN D VTTVKP FPDCJY. B RDF KTTHBQV STC D KTJDIBTQ IYDI RTLKM YDOP WCTOBMPM GKDJH RBIY JTOPC STC D FICPDN TS OBFBITCF, WCPSPCDGKX BQ D JPQICDK KTQMTQ KTJDIBTQ, DQM RBIY SDJBKBIBPF STC FPJLCP FITCDVP TS TSSBJBDK CPJTCMF, DQM BI FYTLKM YDOP GPPQ TWPQPM BQ 1873 TC 1874. B FPDCJYPM STC “GKDJH, KTQMTQ, 1874” DQM B KBHPM RYDI B STLQM. DQM IYDI BF RYX B STLQM NXFPKS KXBQV TQ IYP CTTS TS IYP QTCNDQ FYDR GLBKMBQVF BQ IYP NBMMKP TS IYP QBVYI DQM BQ WTLCBQV CDBQ! B YDM IT SBVLCP TLI D RDX TS VPIIBQV BQFBMP TQP TS IYP NTFI FPJLCP KTJDIBTQF BQ PQVKDQM!";
+    return translation;
+}
+let firstStringToTranslate = "AOL ZPNUZ DLYL ZBIASL, HUK PA AVVR TL H DOPSL AV ZWVA AOLT, IBA NYHKBHSSF P ZAHYALK AV THRL AOLT VBA, HUK SPRL VUL VM AOVZL VSK MHZOPVULK 3K WPJABYLZ, AOHA ZWYPUNZ PUAV MVJBZ DOLU FVB JYVZZ FVBY LFLZ HUK JVBUA AV H OBUKYLK, AOL AYBAO JYFZAHSSPZLK HUK P YLHSPZLK AOHA P OHK ILLU ZLHYJOPUN MVY PA HSS HSVUN. PA DHZU’A AOHA P MVBUK ZVTLAOPUN WHYAPJBSHY. DOHA P UVAPJLK DHZ HJABHSSF HU HIZLUJL, H DOVSL JVSSLJAPVU VM HWWHYLUASF BUYLSHALK AOPUNZ AOHA ZOVBSK OHCL LEPZALK IBA KPKU’A. HUK QBZA HZ P OHK MPNBYLK AOHA VBA, ZVTLVUL, HUK IHJR AOLU P KPKU’A RUVD DOV, DYVAL AV ALSS TL HIVBA PA. AOLF VICPVBZSF OHK H ZLUZL VM AOL KYHTHAPJ, HUK HU LEJLSSLUA ZLUZL VM APTPUN. PM AOLF OHK ZLUA PA AV TL LCLU H MLD KHFZ ILMVYL P DVBSK OHCL HZZBTLK PA DHZ ZVTL RPUK VM JYHGF HKCLYAPZPUN ZABUA, IBA DOLU AOL WVZAJHYK HYYPCLK, PA DHZ PTTLKPHALSF VICPVBZ AV TL DOHA PA YLMLYYLK AV. PA JHYYPLK QBZA AOYLL DVYKZ, HUK PA KLZJYPILK WLYMLJASF AOL TPZZPUN WPLJLZ PU TF WBGGSL. PA QBZA ZHPK: AOL ZOHKVD HYJOPCL.";
+let secondStringToTranslate = "FTNPTQP RDF TGOBTLFKX HPPQ IYDI B FYTLKM HQTR DGTLI MTLVKDF GKDJH GLI B RDF KPSI RTQMPCBQV RYDI YP YDM IT MT RBIY IYP FYDMTR DCJYBOP. B STLQM FTNP ICDJPF TS YBN BQ GTFITQ QPRFWDWPC JKBWWBQVF SCTN IYP WPCBTM. IYP FITCBPF FITWWPM BQ 1873, DCTLQM IYP MDIP TS IYP KPIIPCF GPIRPPQ OBJITCBD DQM FBC JYDCKPF, FT B DFFLNP YP CPILCQPM IT PQVKDQM IYPQ, GLI B JTLKMQ’I SBQM DQX CPJTCM TS YBN BQ IYP BNNBVCDIBTQ SBKPF DQM IYPCP RDF QTIYBQV BQ IYP TSSBJBDK CPJTCM IT FLVVPFI IYDI YP NPI RBIY FBC JYDCKPF, KPI DKTQP RBIY YPC NDEPFIX. IYP ICDBK YDM VTQP JTKM DQM B NBVYI YDOP NTOPM TQ DI IYDI WTBQI, GLI IYPQ B VTI IYP IYBCM PNDBK. IYBF IBNP BI RDF D HPXRTCM JBWYPC DQM BI ITTH D KBIIKP KTQVPC IT GCPDH, IYTLVY IYP RTCM FICLJILCP YPKWPM D KTI. BI JTQSBCNPM POPCXIYBQV B YDM VLPFFPM FT SDC DGTLI GKDJH, DQM CDBFPM D RYTKP KTDM TS QPR ZLPFIBTQF! BI DKFT FLVVPFIPM IYDI B NBVYI SBQM DQFRPCF BQ IYP FYDMTR DCJYBOP, GLI SBCFI B YDM IT SBVLCP TLI RYPCP BI RDF, DQM YTR B JTLKM VPI BQ. B FIBKK JDQ’I GPKBPOP BI, GLI IYP DQFRPC JDNP SCTN D VTTVKP FPDCJY. B RDF KTTHBQV STC D KTJDIBTQ IYDI RTLKM YDOP WCTOBMPM GKDJH RBIY JTOPC STC D FICPDN TS OBFBITCF, WCPSPCDGKX BQ D JPQICDK KTQMTQ KTJDIBTQ, DQM RBIY SDJBKBIBPF STC FPJLCP FITCDVP TS TSSBJBDK CPJTCMF, DQM BI FYTLKM YDOP GPPQ TWPQPM BQ 1873 TC 1874. B FPDCJYPM STC “GKDJH, KTQMTQ, 1874” DQM B KBHPM RYDI B STLQM. DQM IYDI BF RYX B STLQM NXFPKS KXBQV TQ IYP CTTS TS IYP QTCNDQ FYDR GLBKMBQVF BQ IYP NBMMKP TS IYP QBVYI DQM BQ WTLCBQV CDBQ! B YDM IT SBVLCP TLI D RDX TS VPIIBQV BQFBMP TQP TS IYP NTFI FPJLCP KTJDIBTQF BQ PQVKDQM!";
 
 function encode(xStringToTranslate) {
     let encodedString = "emptyu";
@@ -48,10 +49,6 @@ function encode(xStringToTranslate) {
 
 function decode(xStringToTranslate, key) {
     let decodedString = "";
-
-    // for (var k =0; k < key.length; k++) {
-
-    // }
 
     for (var num=0; num < 10; num++) {
         if (key[`${num}`]) {
@@ -79,100 +76,123 @@ function decode(xStringToTranslate, key) {
     return decodedString;
 }
 
-function oldCodeTranslation() {
-    let translation20181019 = {};
-    translation20181019.A = "z";
-    translation20181019.B = "I";
-    translation20181019.C = "R";
-    translation20181019.D = "A";
-    translation20181019.E = "J";
-    translation20181019.F = "S";
-    translation20181019.G = "B";
-    translation20181019.H = "K";
-    translation20181019.I = "T";
-    translation20181019.J = "C";
-    translation20181019.K = "L";
-    translation20181019.L = "U";
-    translation20181019.M = "D";
-    translation20181019.N = "M";
-    translation20181019.O = "V";
-    translation20181019.P = "E";
-    translation20181019.Q = "N";
-    translation20181019.R = "W";
-    translation20181019.S = "F";
-    translation20181019.T = "O";
-    translation20181019.U = "X";
-    translation20181019.V = "G";
-    translation20181019.W = "P";
-    translation20181019.X = "Y";
-    translation20181019.Y = "H";
-    translation20181019.Z = "Q";
+function secondCodeTranslation() {
+    let translation = {};
+    translation.A = "z";
+    translation.B = "I";
+    translation.C = "R";
+    translation.D = "A";
+    translation.E = "J";
+    translation.F = "S";
+    translation.G = "B";
+    translation.H = "K";
+    translation.I = "T";
+    translation.J = "C";
+    translation.K = "L";
+    translation.L = "U";
+    translation.M = "D";
+    translation.N = "M";
+    translation.O = "V";
+    translation.P = "E";
+    translation.Q = "N";
+    translation.R = "W";
+    translation.S = "F";
+    translation.T = "O";
+    translation.U = "X";
+    translation.V = "G";
+    translation.W = "P";
+    translation.X = "Y";
+    translation.Y = "H";
+    translation.Z = "Q";
+    translation["“"] = "“";
+    translation["”"] = "”";
+    translation["!"] = "!";
+    translation["’"] = "’";
+    return translation;
 }
 
-// next part 20:00 19-Oct-2018
-let stringToTranslate2000 = `CTN HLETPQW DP NDBCQ, GDZT DI OJPQJI DP ARGG, ORQ IJQ ARGG TIJRBC QJ KTNPRLAT HT QCLQ UJNFDIB ZJN CTN UJRGA OT UJNQC QCT NDPF. ORQ JZ YJRNPT PCT CLA LI LIPUTN ZJN QCLQ. PCT KJDIQTA JRQ QCLQ NTQRNIDIB QJ QCT RIDQTA PQLQTP YLNNDTA DQP JUI NDPFP.
+let thirdStringToTranslate = `CTN HLETPQW DP NDBCQ, GDZT DI OJPQJI DP ARGG, ORQ IJQ ARGG TIJRBC QJ KTNPRLAT HT QCLQ UJNFDIB ZJN CTN UJRGA OT UJNQC QCT NDPF. ORQ JZ YJRNPT PCT CLA LI LIPUTN ZJN QCLQ. PCT KJDIQTA JRQ QCLQ NTQRNIDIB QJ QCT RIDQTA PQLQTP YLNNDTA DQP JUI NDPFP.
 D CLA FTKQ HWPTGZ LHRPTA ZJN QCT GLPQ ZTU WTLNP PTKLNLQDIB QCT BNTTAW LIA STILG ZNJH QCTDN HJITW OW L SLNDTQW JZ HTLIP, IJQ LGG JZ QCTH TIQDNTGW LKKNJSTA OW QCT GLU. D ULP GTZQ UJIATNDIB CJU QCT MRTTI FITU LOJRQ QCLQ, LIA UCTQCTN HW YJRPDI CLA OTTI DIPQNRYQTA QJ QTGG QCT ZTATNLG HLNPCLGGP LOJRQ HW LYQDSDQDTP. ADPYNTQDJI PTTHTA QCT UDPT YJRNPT, LIA LIWULW, CJU JZQTI AJ WJR BTQ L EJO JZZTN ZNJH L MRTTI?
 YCLNGTP CLP AJIT L PQTNGDIB EJO ATSTGJKDIB L ITQUJNF JZ LBTIQP LIA CDP DIQTGGDBTIYT JKTNLQDJIP CLST OTYJHT L FTW KLNQ JZ ONDQDPC ADKGJHLYW. QCT BNJUDIB DIPQLODGDQW LYNJPP TRNJKT QCNTLQTIP QCT THKDNT, LIA DQ DP CTN HLETPQW’P OTGDTZ QCLQ UT UDGG ITTA QJ NTPKJIA DI FDIA QJ ATPQLODGDPT JRN TITHDTP OTZJNT QCTW BNJU QJJ PQNJIB. QCDP DP L ITU LIA ALIBTNJRP FDIA JZ ULNZLNT, ORQ YJRGA, D PRKKJPT, PLST GDSTP, LIA UT UDGG, DI LIW YLPT, ITTA QJ HLQYC JRN TITHDTP DZ UT LNT QJ PQLW LCTLA.
 QCDP TIQDNT JKTNLQDJI HRPQ OT FTKQ PTYNTQ. ZDNPQ ZNJH JRN TITHDTP, ORQ PTYJIA, LIA ERPQ LP DHKJNQLIQ, ZNJH QCT JZZDYDLG HLYCDITNW JZ PQLQT. CTN HLETPQW YLIIJQ LZZJNA QCT NDPF QCLQ CTN BJSTNIHTIQ YJRGA OT DHKGDYLQTA DI QCTPT JKTNLQDJIP, LIA PDN YCLNGTP CLP NTLPJI QJ OTGDTST QCLQ QCT ZJNTDBI JZZDYT HLW CLST OTTI YJHKNJHDPTA. ZJN QCDP NTLPJI UT ITTA QJ HJST PDN YCLNGTP’ DIQTGGDBTIYT JKTNLQDJI QJ L HJNT PTYRNT GJYLQDJI. LIA D QCDIF D CLST LI DATL UCTNT QCLQ YJRGA OT!
 `;
 
-// JKTNLQDJI OPERATION
-// PTYNTQ SECRET
+function thirdCodeTranslation() {
+    let translation = {};
+    translation.L = "A";
+    translation.O = "B";
+    translation.Y = "C";
+    translation.A = "D";
+    translation.T = "E";
 
-let translation2000 = {};
-// TODO update with code
-translation2000.A = "D";
-translation2000.B = "G";
-translation2000.C = "H";
-translation2000.D = "I";
-translation2000.E = "J";
-translation2000.F = "K";
-translation2000.G = "L";
-translation2000.H = "M";
-translation2000.I = "N";
-translation2000.J = "O";
-translation2000.K = "P";
-translation2000.L = "A";
-translation2000.M = "Q";
-translation2000.N = "R";
-translation2000.O = "B";
-translation2000.P = "S";
-translation2000.Q = "T";
-translation2000.R = "U";
-translation2000.S = "V";
-translation2000.T = "E";
-translation2000.U = "W";
-translation2000.V = "_";//////
-translation2000.W = "Y";
-translation2000.X = "_";/////
-translation2000.Y = "C";
-translation2000.Z = "F";
+    translation.Z = "F";
 
-// punctuation
-translation2000["'"] = "'";
-translation2000[","] = ",";
-translation2000["."] = ".\n";
-translation2000["!"] = "!";
-translation2000["?"] = "?";
-translation2000["’"] = "’";
+    translation.B = "G";
+    translation.C = "H";
+    translation.D = "I";
+    translation.E = "J";
+    translation.F = "K";
+    translation.G = "L";
+    translation.H = "M";
+    translation.I = "N";
+    translation.J = "O";
+    translation.K = "P";
+    translation.M = "Q";
+    translation.N = "R";
+    translation.P = "S";
+    translation.Q = "T";
+    translation.R = "U";
+    translation.S = "V";
+    translation.U = "W";
+    translation.V = "X";//////
+    translation.W = "Y";
+    translation.X = "Z";/////
+    translation.Z = "F";
 
+    // punctuation
+    translation["'"] = "'";
+    translation[","] = ",";
+    translation["."] = ".\n";
+    translation["!"] = "!";
+    translation["?"] = "?";
+    translation["’"] = "’";
+    
+    return translation;
+}
 
-// ..r .a..ts. it ri..s, .if. in .otson it d..., ..s nos d... .no... so ..rt.ad. .. s.as .or.in. for ..r .o..d .. .ors. s.. rit._._ ..s of .o.rt. t.. .ad
-// an ant..r for s.as_._ t.. .oins.d o.s s.as r.s.rnin. so s.. .nis.d tsas.t .arri.d ist o.n rit.t_._  i .ad ...s ..t..f a..t.d for s.. .ats f.. ..art t..arasin. s.. .r..d. and ..na. fro. s..ir .on.. .. a .ari.s. of ..ant, nos a.. of s... .nsir... a..ro..d .. s.. .a._._ i .at ..fs .ond.rin. .o. s.. ....n .n.. a.o.s s.as, and ...s..r .. .o.tin .ad ...n intsr..s.d so s... s.. f.d.ra. .art.a..t a.o.s .. a.si.isi.t_._ dit.r.sion t....d s.. .it. .o.rt., and an..a., .o. ofs.n do .o. ..s a .o. off.r fro. a ....n?  ..ar..t .at don. a ts.r.in. .o. d....o.in. a n.s.or. of a..nst and .it ins...i..n.. o..rasiont .a.. ...o.. a ... .ars of .risit. di..o.a.._._ s.. .ro.in. intsa.i.is. a.rott ..ro.. s.r.as.nt s.. ...ir., and is it ..r .a..ts.’t ...i.f s.as .. .i.. n..d so r.t.ond in .ind so d.tsa.i.it. o.r .n..i.t ..for. s... .ro. soo tsron._._ s.it it a n.. and dan..ro.t .ind of .arfar., ..s .o..d, i t...ot., ta.. .i..t, and .. .i.., in an. .at., n..d
-// so .as.. o.r .n..i.t if .. ar. so tsa. a..ad_._  s.it .nsir. o..rasion ..ts .. ...s t..r.s_._ firts fro. o.r .n..i.t, ..s t..ond, and ..ts at i..orsans, fro.
-// s.. offi.ia. .a..in.r. of tsas._._ ..r .a..ts. .annos afford s.. rit. s.as ..r .o..rn..ns .o..d .. i...i.as.d in s..t. o..rasiont, and tir ..ar..t .at r.aton
-// so ...i... s.as s.. for.i.n offi.. .a. .a.. ...n .o..ro.it.d_._ for s.it r.aton .. n..d so .o.. tir ..ar..t’ ins...i..n.. o..rasion so a .or. t...r. .o.asion_._ and i s.in. i .a.. an id.a ...r. s.as .o..d ..!
+function punctuationTranslation() {
+    let puncMap = {};
+    puncMap["'"] = "'";
+    puncMap[","] = ",";
+    puncMap["."] = ".\n";
+    puncMap["!"] = "!";
+    puncMap["?"] = "?";
+    puncMap["’"] = "’";
+    puncMap["“"] = "“";
+    puncMap["”"] = "”";
+    puncMap["!"] = "!";
+    puncMap["’"] = "’";
+    puncMap[" "] = " ";
+    puncMap[":"] = ":";
 
-// console.log(`${decode(stringToTranslate2000, translation2000)}`);
+    return puncMap;
+}
 
 module.exports = {
     getEncryptedText: function() {
-        return stringToTranslate2000;
+        // return firstStringToTranslate;
+        return secondStringToTranslate;
+        return thirdStringToTranslate;
     },
     getKey: function() {
-        return translation2000;
+        // return firstCodeTranslation();
+        return secondCodeTranslation();
+        return thirdCodeTranslation();
     },
     getDecoder: function() {
         return decode;
+    },
+    getPunctuation: function() {
+        return punctuationTranslation;
     }
 }
