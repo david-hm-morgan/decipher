@@ -168,7 +168,7 @@ translation2000.T = "_"; //E?
 // so ...i... s.as s.. for.i.n offi.. .a. .a.. ...n .o..ro.it.d_._ for s.it r.aton .. n..d so .o.. tir ..ar..t’ ins...i..n.. o..rasion so a .or. t...r. .o.asion_._ and i s.in. i .a.. an id.a ...r. s.as .o..d ..!
 
 
-// console.log(`${decode(stringToTranslate2000, translation2000)}`);
+console.log(`${decode(stringToTranslate2000, translation2000)}`);
 
 
 module.exports = {
