@@ -167,9 +167,7 @@ translation2000.T = "_"; //E?
 // s.. offi.ia. .a..in.r. of tsas._._ ..r .a..ts. .annos afford s.. rit. s.as ..r .o..rn..ns .o..d .. i...i.as.d in s..t. o..rasiont, and tir ..ar..t .at r.aton
 // so ...i... s.as s.. for.i.n offi.. .a. .a.. ...n .o..ro.it.d_._ for s.it r.aton .. n..d so .o.. tir ..ar..t’ ins...i..n.. o..rasion so a .or. t...r. .o.asion_._ and i s.in. i .a.. an id.a ...r. s.as .o..d ..!
 
-
-console.log(`${decode(stringToTranslate2000, translation2000)}`);
-
+// console.log(`${decode(stringToTranslate2000, translation2000)}`);
 
 module.exports = {
     getEncryptedText: function() {
