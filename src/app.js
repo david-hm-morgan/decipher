@@ -9,7 +9,8 @@ var decoderFunction = index.getDecoder();
 
 var decoderOutptut = decoderFunction(encryptedText, key);
 
-var htmlOutput = "<table><th>Encrypted Text</th><th>Output</th>";
+var htmlOutput = "<meta http-equiv=\"refresh\" content=\"5\">";
+htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 htmlOutput += `<tr><td><code>${encryptedText}</code></td>`
 htmlOutput += `<td><code>${decoderOutptut}</code></td></tr>`
 htmlOutput += "</table>";
