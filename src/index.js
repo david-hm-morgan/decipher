@@ -64,7 +64,7 @@ function decode(xStringToTranslate, key) {
     for (var x = 0; x < xStringToTranslate.length; x++) {
         var c = xStringToTranslate.charAt(x);
         c = c.toUpperCase();
-        var translated = key[c] ? key[c] : "   ";
+        var translated = key[c] ? key[c] : "  ";
 
         try {
             translated = translated.toLowerCase();
