@@ -1,33 +1,37 @@
 function firstCodeTranslation() {
     let translation = {};
-    translation.A = "B";
-    translation.B = "C";
-    translation.C = "D";
-    translation.D = "E";
-    translation.E = "F";
-    translation.F = "G";
-    translation.G = "H";
-    translation.H = "I";
-    translation.I = "J";
-    translation.J = "K";
-    translation.K = "L";
-    translation.L = "M";
-    translation.M = "N";
-    translation.N = "O";
-    translation.O = "P";
-    translation.P = "Q";
-    translation.Q = "R";
-    translation.R = "S";
-    translation.S = "T";
-    translation.T = "U";
-    translation.U = "V";
-    translation.V = "w";
-    translation.W = "x";
-    translation.X = "Y";
-    translation.Y = "Z";
-    translation.Z = "A";
+    translation.A = "S";
+    translation.B = "_";
+    translation.C = "_";
+    translation.D = "_";
+    translation.E = "_";
+    translation.F = "_";
+    translation.G = "_";
+    translation.H = "_";
+    translation.I = "_";
+    translation.J = "_";
+    translation.K = "_";
+    translation.L = "_";
+    translation.M = "_";
+    translation.N = "_";
+    translation.O = "_";
+    translation.P = "_";
+    translation.Q = "_";
+    translation.R = "_";
+    translation.S = "_";
+    translation.T = "_";
+    translation.U = "_";
+    translation.V = "_";
+    translation.W = "_";
+    translation.X = "_";
+    translation.Y = "_";
+    translation.Z = "_";
     translation[" "] = " ";
     translation["?"] = "?";
+    translation["."] = ".";
+    translation[":"] = ":";
+    translation["’"] = "’";
+    translation[","] = ",";
 
     return translation;
 }
@@ -180,13 +184,13 @@ function punctuationTranslation() {
 
 module.exports = {
     getEncryptedText: function() {
-        // return firstStringToTranslate;
-        return secondStringToTranslate;
+        return firstStringToTranslate;
+        // return secondStringToTranslate;
         return thirdStringToTranslate;
     },
     getKey: function() {
-        // return firstCodeTranslation();
-        return secondCodeTranslation();
+        return firstCodeTranslation();
+        // return secondCodeTranslation();
         return thirdCodeTranslation();
     },
     getDecoder: function() {
