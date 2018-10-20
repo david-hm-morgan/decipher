@@ -193,12 +193,12 @@ function punctuationTranslation() {
 
 module.exports = {
     getEncryptedText: function() {
-        return firstStringToTranslate;
+        // return firstStringToTranslate;
         // return secondStringToTranslate;
         return thirdStringToTranslate;
     },
     getKey: function() {
-        return firstCodeTranslation();
+        // return firstCodeTranslation();
         // return secondCodeTranslation();
         return thirdCodeTranslation();
     },
