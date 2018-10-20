@@ -1,8 +1,19 @@
 const express = require('express')
 const app = express()
 const port = 3000
-// const index = require('index')
+const index = require('./index')
 
-app.get('/', (req, res) => res.send('Decryption'))
+var key = index.getKey();
+var encryptedText = index.getEncryptedText();
+var decoderFunction = index.getDecoder();
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+var decoderOutptut = decoderFunction(encryptedText, key);
+
+var htmlOutput = "<table><th>Encrypted Text</th><th>Output</th>";
+htmlOutput += `<tr><td><code>${encryptedText}</code></td>`
+htmlOutput += `<td><code>${decoderOutptut}</code></td></tr>`
+htmlOutput += "</table>";
+
+app.get('/', (req, res) => res.send(`${htmlOutput}`))
+
+app.listen(port, () => console.log(`Decryption listening on port ${port}!`))
