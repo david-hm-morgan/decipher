@@ -4,7 +4,7 @@
   "description": "decode",
   "main": "index.js",
   "scripts": {
-    "test": "node src/index.js && node src/app.js",
+    "test": "node src/app.js",
     "watch": "npm-watch test"
   },
   "watch": {
