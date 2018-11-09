@@ -106,3 +106,12 @@ function eighthNovemberTranslationB() {
     
     return translation;
 }
+
+module.exports = {
+    getEncryptedText: function() {
+        return eighthNovemberStringToTranslateA;
+    },
+    getKey: function() {
+        return eighthNovemberTranslationA();
+    }
+}
