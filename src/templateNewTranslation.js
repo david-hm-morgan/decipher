@@ -81,7 +81,7 @@ function eighthNovemberTranslationB() {
     translation.F = "_";
     translation.G = "_";
     translation.H = "_";
-    translation.J = "V";
+    translation.J = "_";
     translation.M = "_";
 
     translation.N = "_";
@@ -108,10 +108,16 @@ function eighthNovemberTranslationB() {
 }
 
 module.exports = {
-    getEncryptedText: function() {
+    getEncryptedTextA: function() {
         return eighthNovemberStringToTranslateA;
     },
-    getKey: function() {
+    getEncryptedTextB: function() {
+        return eighthNovemberStringToTranslateB;
+    },
+    getKeyA: function() {
         return eighthNovemberTranslationA();
+    },
+    getKeyB: function() {
+        return eighthNovemberTranslationB();
     }
 }
