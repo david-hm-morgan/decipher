@@ -81,7 +81,7 @@ function eighthNovemberTranslationB() {
     translation.F = "_";
     translation.G = "_";
     translation.H = "_";
-    translation.J = "V";
+    translation.J = "_";
     translation.M = "_";
 
     translation.N = "_";
