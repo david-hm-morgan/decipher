@@ -31,8 +31,8 @@ htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 htmlOutput += `<tr><td><code>${encryptedTextB}</code></td>`
 htmlOutput += `<td><code>${decoderOutputB}</code></td></tr>`
 
-htmlOutput += `<td>${frequency}</td>`;
-htmlOutput += `<td>${frequencyOfClear}</td>`;
+htmlOutput += `<td><code>${frequency}</code></td>`;
+htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
 htmlOutput += "</table>";
 
