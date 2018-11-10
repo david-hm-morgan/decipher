@@ -158,9 +158,10 @@ function displaySorted(map) {
 // console.log(sortMapByValue(singleFreqAnalyser(sampleClearText)));
 // console.log(`1st most common: ${sortedMap[0]}, ${sortedMap[1]}, ${sortedMap[2]}, ${sortedMap[3]}, ${sortedMap[4]}`)
 
-console.log(displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText))));
-console.log(displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText))));
-console.log(displaySorted(sortMapByValue(quadFrequency(sampleClearText))));
+// Uncomment these if you want to see the console output
+// console.log(displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText))));
+// console.log(displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText))));
+// console.log(displaySorted(sortMapByValue(quadFrequency(sampleClearText))));
 
 module.exports = {
     analyser: function() {
@@ -174,6 +175,17 @@ module.exports = {
         combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(encryptedText)))}`;
         combinedOutput += `<br>`;
         combinedOutput += `Quads: ${displaySorted(sortMapByValue(quadFrequency(encryptedText)))}`;
+
+        return combinedOutput;
+    },
+    clearSorter: function() {
+        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(sampleClearText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Quads: ${displaySorted(sortMapByValue(quadFrequency(sampleClearText)))}`;
 
         return combinedOutput;
     }

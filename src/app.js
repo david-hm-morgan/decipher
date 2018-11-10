@@ -17,6 +17,7 @@ var decoderOutputA = decoderFunction(encryptedTextA, keyA);
 var decoderOutputB = decoderFunction(encryptedTextB, keyB);
 
 var frequency = frequencyTools.sorter();
+var frequencyOfClear = frequencyTools.clearSorter();
 
 var htmlOutput = "<meta http-equiv=\"refresh\" content=\"5\">";
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
@@ -31,7 +32,7 @@ htmlOutput += `<tr><td><code>${encryptedTextB}</code></td>`
 htmlOutput += `<td><code>${decoderOutputB}</code></td></tr>`
 
 htmlOutput += `<td>${frequency}</td>`;
-htmlOutput += `<td></td>`;
+htmlOutput += `<td>${frequencyOfClear}</td>`;
 
 htmlOutput += "</table>";
 
