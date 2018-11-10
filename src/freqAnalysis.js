@@ -69,6 +69,29 @@ function doubleFreqAnalyser(stringToAnalyse) {
     return counts;
 }
 
+function tripleFreqAnalyser(stringToAnalyse) {
+    let counts = {};
+
+    // start at 2nd position and reflect on previous two
+    for (var x=2; x < stringToAnalyse.length; x++) {
+        
+        var cur = stringToAnalyse.charAt(x);
+        var prev = stringToAnalyse.charAt(x-1);
+        var prevPrev = stringToAnalyse.charAt(x-2);
+        if (charWeCareAbout(cur) && charWeCareAbout(prev) && charWeCareAbout(prevPrev)) {
+            var triple = prevPrev + prev + cur;
+            triple = triple.toUpperCase();
+            
+            if (counts[triple] !== undefined) {
+                counts[triple]++;
+            } else {
+                counts[triple] = 1;
+            }
+        }
+    }
+    return counts;
+}
+
 function sortMapByValue(map) {
     var tupleArray = [];
     for (var key in map) tupleArray.push([key, map[key]]);
@@ -112,8 +135,11 @@ module.exports = {
         return singleFreqAnalyser();
     },
     sorter: function() {
-        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)))}<br>`
+        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)))}`;
+        combinedOutput += `<br>`;
         combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(encryptedText)))}`;
 
         return combinedOutput;
     }
