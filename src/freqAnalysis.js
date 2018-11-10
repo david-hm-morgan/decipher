@@ -51,7 +51,7 @@ function singleFreqAnalyser(stringToAnalyse) {
     return counts;
 }
 
-function doubleFreqAnalyser(stringToAnalyse) {
+function pairFreqAnalyser(stringToAnalyse) {
     let counts = {};
 
     // start at 1th position and reflect on previous
@@ -60,6 +60,28 @@ function doubleFreqAnalyser(stringToAnalyse) {
         var cur = stringToAnalyse.charAt(x);
         var prev = stringToAnalyse.charAt(x-1);
         if (charWeCareAbout(cur) && charWeCareAbout(prev)) {
+            var pair = prev + cur;
+            pair = pair.toUpperCase();
+            
+            if (counts[pair] !== undefined) {
+                counts[pair]++;
+            } else {
+                counts[pair] = 1;
+            }
+        }
+    }
+    return counts;
+}
+
+function matchingPairFreqAnalyser(stringToAnalyse) {
+    let counts = {};
+
+    // start at 1th position and reflect on previous
+    for (var x=1; x < stringToAnalyse.length; x++) {
+        
+        var cur = stringToAnalyse.charAt(x);
+        var prev = stringToAnalyse.charAt(x-1);
+        if (charWeCareAbout(cur) && charWeCareAbout(prev) && cur === prev) {
             var pair = prev + cur;
             pair = pair.toUpperCase();
             
@@ -159,7 +181,8 @@ function displaySorted(map) {
 // console.log(`1st most common: ${sortedMap[0]}, ${sortedMap[1]}, ${sortedMap[2]}, ${sortedMap[3]}, ${sortedMap[4]}`)
 
 // Uncomment these if you want to see the console output
-// console.log(displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText))));
+// console.log(displaySorted(sortMapByValue(pairFreqAnalyser(sampleClearText))));
+// console.log(displaySorted(sortMapByValue(matchingPairFreqAnalyser(sampleClearText))));
 // console.log(displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText))));
 // console.log(displaySorted(sortMapByValue(quadFrequency(sampleClearText))));
 
@@ -170,22 +193,26 @@ module.exports = {
     sorter: function() {
         let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)))}`;
         combinedOutput += `<br>`;
-        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)))}`;
+        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(pairFreqAnalyser(encryptedText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Repeats: ${displaySorted(sortMapByValue(matchingPairFreqAnalyser(encryptedText)))}`;
         combinedOutput += `<br>`;
         combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(encryptedText)))}`;
         combinedOutput += `<br>`;
-        combinedOutput += `Quads: ${displaySorted(sortMapByValue(quadFrequency(encryptedText)))}`;
+        combinedOutput += `Quadrup: ${displaySorted(sortMapByValue(quadFrequency(encryptedText)))}`;
 
         return combinedOutput;
     },
     clearSorter: function() {
         let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(sampleClearText)))}`;
         combinedOutput += `<br>`;
-        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText)))}`;
+        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(pairFreqAnalyser(sampleClearText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Repeats: ${displaySorted(sortMapByValue(matchingPairFreqAnalyser(sampleClearText)))}`;
         combinedOutput += `<br>`;
         combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText)))}`;
         combinedOutput += `<br>`;
-        combinedOutput += `Quads: ${displaySorted(sortMapByValue(quadFrequency(sampleClearText)))}`;
+        combinedOutput += `Quadrup: ${displaySorted(sortMapByValue(quadFrequency(sampleClearText)))}`;
 
         return combinedOutput;
     }
