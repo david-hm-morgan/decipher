@@ -47,6 +47,28 @@ function singleFreqAnalyser(stringToAnalyse) {
     return counts;
 }
 
+function doubleFreqAnalyser(stringToAnalyse) {
+    let counts = {};
+
+    // start at 1th position and reflect on previous
+    for (var x=1; x < stringToAnalyse.length; x++) {
+        
+        var cur = stringToAnalyse.charAt(x);
+        var prev = stringToAnalyse.charAt(x-1);
+        if (charWeCareAbout(cur) && charWeCareAbout(prev)) {
+            var pair = prev + cur;
+            pair = pair.toUpperCase();
+            
+            if (counts[pair] !== undefined) {
+                counts[pair]++;
+            } else {
+                counts[pair] = 1;
+            }
+        }
+    }
+    return counts;
+}
+
 function sortMapByValue(map) {
     var tupleArray = [];
     for (var key in map) tupleArray.push([key, map[key]]);
@@ -66,16 +88,19 @@ function displaySorted(map) {
     return output;
 }
 
-console.log("Sample Clear Text has the following profile");
+// console.log("Sample Clear Text has the following profile");
 // var sortedMap = sortMapByValue(singleFreqAnalyser(sampleClearText));
-console.log(sortMapByValue(singleFreqAnalyser(sampleClearText)));
+// console.log(sortMapByValue(singleFreqAnalyser(sampleClearText)));
 // console.log(`1st most common: ${sortedMap[0]}, ${sortedMap[1]}, ${sortedMap[2]}, ${sortedMap[3]}, ${sortedMap[4]}`)
+
+// console.log(sortMapByValue(doubleFreqAnalyser(sampleClearText)));
 
 module.exports = {
     analyser: function() {
         return singleFreqAnalyser();
     },
     sorter: function() {
-        return displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)));
+        return displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText))) +
+            displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)));
     }
 }
