@@ -92,6 +92,32 @@ function tripleFreqAnalyser(stringToAnalyse) {
     return counts;
 }
 
+
+function quadFrequency(stringToAnalyse) {
+    let counts = {};
+
+    // start at 3rd position and reflect on previous three
+    for (var x=3; x < stringToAnalyse.length; x++) {
+        
+        var cur = stringToAnalyse.charAt(x);
+        var prev = stringToAnalyse.charAt(x-1);
+        var prevPrev = stringToAnalyse.charAt(x-2);
+        var prevPrevPrev = stringToAnalyse.charAt(x-3);
+
+        if (charWeCareAbout(cur) && charWeCareAbout(prev) && charWeCareAbout(prevPrev) && charWeCareAbout(prevPrevPrev)) {
+            var quad = prevPrevPrev + prevPrev + prev + cur;
+            quad = quad.toUpperCase();
+            
+            if (counts[quad] !== undefined) {
+                counts[quad]++;
+            } else {
+                counts[quad] = 1;
+            }
+        }
+    }
+    return counts;
+}
+
 function sortMapByValue(map) {
     var tupleArray = [];
     for (var key in map) tupleArray.push([key, map[key]]);
@@ -128,8 +154,9 @@ function displaySorted(map) {
 // console.log(sortMapByValue(singleFreqAnalyser(sampleClearText)));
 // console.log(`1st most common: ${sortedMap[0]}, ${sortedMap[1]}, ${sortedMap[2]}, ${sortedMap[3]}, ${sortedMap[4]}`)
 
-// console.log(sortMapByValue(doubleFreqAnalyser(sampleClearText)));
-// console.log(sortMapByValue(tripleFreqAnalyser(sampleClearText)));
+console.log(displaySorted(sortMapByValue(doubleFreqAnalyser(sampleClearText))));
+console.log(displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText))));
+console.log(displaySorted(sortMapByValue(quadFrequency(sampleClearText))));
 
 module.exports = {
     analyser: function() {
@@ -141,6 +168,8 @@ module.exports = {
         combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)))}`;
         combinedOutput += `<br>`;
         combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(encryptedText)))}`;
+        combinedOutput += `<br>`;
+        combinedOutput += `Quads: ${displaySorted(sortMapByValue(quadFrequency(encryptedText)))}`;
 
         return combinedOutput;
     }
