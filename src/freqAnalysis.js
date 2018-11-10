@@ -83,7 +83,19 @@ function sortMapByValue(map) {
 };
 
 function displaySorted(map) {
-    var output = JSON.stringify(map);
+    var limitTop = 6;
+    var output = "";
+
+    Object.keys(map).some(function(key) {
+        // console.log(key, map[key]);
+        output += `${key} : ${map[key]}   `;
+        limitTop--;
+        if (limitTop <= 0) {
+            return output;
+        }
+    });
+     
+    // var output = JSON.stringify(map);
 
     return output;
 }
@@ -100,7 +112,9 @@ module.exports = {
         return singleFreqAnalyser();
     },
     sorter: function() {
-        return displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText))) +
-            displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)));
+        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)))}<br>`
+        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(doubleFreqAnalyser(encryptedText)))}`;
+
+        return combinedOutput;
     }
 }
