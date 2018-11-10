@@ -9,7 +9,7 @@ const frequencyTools = require('./freqAnalysis');
 var decoderFunction = index.getDecoder();
 
 var keyA = currentPuzzle.getKeyA();
-var keyB = currentPuzzle.getKeyB();
+var keyB = currentPuzzleB.getKeyB();
 let encryptedTextA = currentPuzzle.getEncryptedTextA();
 let encryptedTextB = currentPuzzleB.getEncryptedTextB();
 
