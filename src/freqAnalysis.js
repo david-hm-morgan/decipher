@@ -30,6 +30,12 @@ function sortMapByValue(map) {
     return sortedMap;
 };
 
+function displaySorted(map) {
+    var output = JSON.stringify(map);
+
+    return output;
+}
+
 // console.log(sortMapByValue(singleFreqAnalyser(encryptedText)));
 
 module.exports = {
@@ -37,6 +43,6 @@ module.exports = {
         return singleFreqAnalyser();
     },
     sorter: function() {
-        return sortMapByValue(singleFreqAnalyser(encryptedText));
+        return displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)));
     }
 }
