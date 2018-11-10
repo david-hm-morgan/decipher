@@ -6,35 +6,39 @@ let eighthNovemberStringToTranslateB = `JKYRMGHJ WDMDI YNZ GLZ HE KJLX KD RCYHTR
 function eighthNovemberTranslationA() {
     let translation = {};
     
-    translation.K = "_";
-    translation.R = "_";
-    translation.E = "_";
-    translation.A = "_";
-    translation.L = "_";
-    translation.P = "_";
-    translation.O = "_";
+    translation.K = "U"; //cerys thinks  U
+    translation.R = "B"; // cerys thinks B
+    translation.E = "F"; //cerys thinks F
 
-    translation.I = "_";
+    translation.A = "A"; // O according to freq but A according to triple freq
+    translation.Z = "N"; // I according to freq but N according to triples
+    translation.D = "D"; // D according to triples cerys thinks D too
+    
 
-    translation.T = "_";
-    translation.U = "_";
-    translation.V = "_";
-    translation.W = "_";
-    translation.X = "_";
-    translation.Y = "_";
-    translation.Z = "_";
-    translation.B = "_";
-    translation.C = "U"; 
-    translation.D = "_";
-    translation.F = "_";
-    translation.G = "S";
-    translation.H = "T";///?
-    translation.J = "_";
-    translation.M = "H";
+    translation.L = "V"; // cerys thought this might be V
+    translation.P = "Y";  //cerys thinks Y
+    translation.O = "X";
 
-    translation.N = "E";
+    translation.I = "C"; //cerys thinks C
+
+    translation.J = "T"; // according to freq
+    translation.T = "H"; // according to pair freq
+    translation.N = "E"; // concurs with freq analysis
+
+    translation.U = "I"; // U according to freq cerys thinks I
+    translation.V = "J";  // I filled this in after Cerys left
+    translation.W = "K";  //cerys thinks W
+    translation.X = "L"; // cerys thinks L
+    translation.Y = "M"; // cerys thinks 
+    translation.B = "O"; // A according to freq cerys thinks O
+    translation.C = "P";  // U?  cerys thinks P
+    translation.F = "Q";// I filled this in after Cerys left
+    translation.G = "R"; // S possible  cerys thinks  R
+    translation.H = "S"; // cerys thinks S
+    translation.M = "W"; // H  cerys thinks W
+
     translation.Q = "_";
-    translation.S = "_";
+    translation.S = "G"; //cerys thinks G
 
     // punctuation
     translation["'"] = "'";
