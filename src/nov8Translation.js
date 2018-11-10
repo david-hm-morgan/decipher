@@ -24,19 +24,17 @@ function eighthNovemberTranslationA() {
     translation.Y = "_";
     translation.Z = "_";
     translation.B = "_";
-    translation.C = "_"; 
+    translation.C = "U"; 
     translation.D = "_";
     translation.F = "_";
-    translation.G = "_";
-    translation.H = "_";
+    translation.G = "S";
+    translation.H = "T";///?
     translation.J = "_";
-    translation.M = "_";
+    translation.M = "H";
 
-    translation.N = "_";
+    translation.N = "E";
     translation.Q = "_";
     translation.S = "_";
-
-
 
     // punctuation
     translation["'"] = "'";
@@ -59,7 +57,7 @@ function eighthNovemberTranslationB() {
     let translation = {};
     
     translation.K = "_";
-    translation.R = "_";
+    translation.R = "_"; // I or A
     translation.E = "_";
     translation.A = "_";
     translation.L = "_";
@@ -77,7 +75,7 @@ function eighthNovemberTranslationB() {
     translation.Z = "_";
     translation.B = "_";
     translation.C = "_"; 
-    translation.D = "_";
+    translation.D = "_"; // I or A or O
     translation.F = "_";
     translation.G = "_";
     translation.H = "_";
