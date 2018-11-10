@@ -129,6 +129,7 @@ function displaySorted(map) {
 // console.log(`1st most common: ${sortedMap[0]}, ${sortedMap[1]}, ${sortedMap[2]}, ${sortedMap[3]}, ${sortedMap[4]}`)
 
 // console.log(sortMapByValue(doubleFreqAnalyser(sampleClearText)));
+// console.log(sortMapByValue(tripleFreqAnalyser(sampleClearText)));
 
 module.exports = {
     analyser: function() {
