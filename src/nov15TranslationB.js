@@ -53,10 +53,10 @@ function eighthNovemberTranslationB() {
 }
 
 module.exports = {
-    getEncryptedTextA: function() {
+    getEncryptedText: function() {
         return eighthNovemberStringToTranslateB;
     },
-    getKeyA: function() {
+    getKey: function() {
         return eighthNovemberTranslationB();
     }
 }
