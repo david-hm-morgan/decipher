@@ -5,8 +5,9 @@ const index = require('./index');
 const currentPuzzleA = require('./nov15TranslationA');
 const currentPuzzleB = require('./nov15TranslationB');
 const frequencyTools = require('./freqAnalysis');
+const decoderTools = require('./decoder');
 
-var decoderFunction = index.getDecoder();
+var decoderFunction = decoderTools.getDecoder();
 var sorterFunction = frequencyTools.sorter();
 
 var keyA = currentPuzzleA.getKey();
