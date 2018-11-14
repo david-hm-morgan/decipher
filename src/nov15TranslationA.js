@@ -1,4 +1,4 @@
-let eighthNovemberStringToTranslateA = `(Replace this text with your message to decipher)`;
+let eighthNovemberStringToTranslateA = `(AAAAAAAAAAAAAReplace this text with part A's text to decipher)`;
 
 function eighthNovemberTranslationA() {
     let translation = {};

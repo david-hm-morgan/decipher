@@ -190,34 +190,28 @@ function displaySorted(map) {
 // console.log(displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText))));
 // console.log(displaySorted(sortMapByValue(quadFrequency(sampleClearText))));
 
+function sortThisStuff(stuff) {
+    let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(stuff)))}`;
+    combinedOutput += `<br>`;
+    combinedOutput += `Doubles: ${displaySorted(sortMapByValue(pairFreqAnalyser(stuff)))}`;
+    combinedOutput += `<br>`;
+    combinedOutput += `Repeats: ${displaySorted(sortMapByValue(matchingPairFreqAnalyser(stuff)))}`;
+    combinedOutput += `<br>`;
+    combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(stuff)))}`;
+    combinedOutput += `<br>`;
+    combinedOutput += `Quadrup: ${displaySorted(sortMapByValue(quadFrequency(stuff)))}`;
+
+    return combinedOutput;
+}
+
 module.exports = {
     analyser: function() {
         return singleFreqAnalyser();
     },
     sorter: function() {
-        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(encryptedText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(pairFreqAnalyser(encryptedText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Repeats: ${displaySorted(sortMapByValue(matchingPairFreqAnalyser(encryptedText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(encryptedText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Quadrup: ${displaySorted(sortMapByValue(quadFrequency(encryptedText)))}`;
-
-        return combinedOutput;
+        return sortThisStuff;
     },
     clearSorter: function() {
-        let combinedOutput =  `Singles: ${displaySorted(sortMapByValue(singleFreqAnalyser(sampleClearText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Doubles: ${displaySorted(sortMapByValue(pairFreqAnalyser(sampleClearText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Repeats: ${displaySorted(sortMapByValue(matchingPairFreqAnalyser(sampleClearText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Triples: ${displaySorted(sortMapByValue(tripleFreqAnalyser(sampleClearText)))}`;
-        combinedOutput += `<br>`;
-        combinedOutput += `Quadrup: ${displaySorted(sortMapByValue(quadFrequency(sampleClearText)))}`;
-
-        return combinedOutput;
+        return sortThisStuff(sampleClearText);
     }
 }
