@@ -81,10 +81,10 @@ function reverser(stringToReverse) {
 }
 
 module.exports = {
-    getEncryptedTextB: function() {
+    getEncryptedText: function() {
         return reverser(eighthNovemberStringToTranslateB);
     },
-    getKeyB: function() {
+    getKey: function() {
         return eighthNovemberTranslationB();
     }
 }
