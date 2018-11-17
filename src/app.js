@@ -6,6 +6,7 @@ const currentPuzzleB = require('./nov15TranslationB');
 const frequencyTools = require('./freqAnalysis');
 const decoderTools = require('./decoder');
 const transposerTools = require('./transposer');
+const coincidenceTools = require('./coincidence');
 
 var transposerFunction = transposerTools.getTransposer();
 
@@ -24,11 +25,14 @@ var frequencyA = sorterFunction(encryptedTextA);
 var frequencyB = sorterFunction(encryptedTextB);
 var frequencyOfClear = frequencyTools.clearSorter();
 
+var coincidence = coincidenceTools.getindexOfCoincidence();
+
 var htmlOutput = "<meta http-equiv=\"refresh\" content=\"15\">";
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
 
+htmlOutput += `<tr><td>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
@@ -39,6 +43,7 @@ htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 htmlOutput += `<tr><td><code>${encryptedTextB}</code></td>`
 htmlOutput += `<td><code>${decoderOutputB}</code></td></tr>`
 
+htmlOutput += `<tr><td>Index of coincidence = ${coincidence(encryptedTextB)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyB}</code></td>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 

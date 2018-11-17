@@ -207,6 +207,9 @@ function sortThisStuff(stuff) {
 }
 
 module.exports = {
+    getSingleFreqAnalyser: function() {
+        return singleFreqAnalyser;
+    },
     sorter: function() {
         return sortThisStuff;
     },
