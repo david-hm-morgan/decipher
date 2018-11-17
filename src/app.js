@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 80;
 const currentPuzzleA = require('./nov15TranslationA');
 const currentPuzzleB = require('./nov15TranslationB');
 const frequencyTools = require('./freqAnalysis');
