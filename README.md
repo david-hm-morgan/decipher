@@ -10,7 +10,7 @@ This checks for any coding changes and when saved, compiles and updates the host
 
 ## Browser
 
-http://localhost:3000/
+http://localhost:80/
 
 It should reload every few seconds, but sometimes you do need to refresh the web page yourself.
 
