@@ -1,6 +1,6 @@
-let eighthNovemberStringToTranslateA = `(Replace this text with your message to decipher)`;
+let twentySecondNovemberStringToTranslateA = `(Replace this text with your message to decipher)`;
 
-function eighthNovemberTranslationA() {
+function twentySecondNovemberTranslationA() {
     let translation = {};
     
     translation.K = "_";
@@ -54,9 +54,9 @@ function eighthNovemberTranslationA() {
 
 module.exports = {
     getEncryptedText: function() {
-        return eighthNovemberStringToTranslateA;
+        return twentySecondNovemberStringToTranslateA;
     },
     getKey: function() {
-        return eighthNovemberTranslationA();
+        return twentySecondNovemberTranslationA();
     }
 }
