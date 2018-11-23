@@ -7,8 +7,11 @@ const frequencyTools = require('./freqAnalysis');
 const decoderTools = require('./decoder');
 const transposerTools = require('./transposer');
 const coincidenceTools = require('./coincidence');
+const reverserTools = require('./reverser');
 
 var transposerFunction = transposerTools.getTransposer();
+
+var reverserFunction = reverserTools.getReverser();
 
 var decoderFunction = decoderTools.getDecoder();
 var sorterFunction = frequencyTools.sorter();
