@@ -37,7 +37,6 @@ function getData(countingFunction, clearText, encryptedTextA) {
     var encTupleArray = [];
     for (var key in countsEnc) encTupleArray.push(countsEnc[key]);
 
-
     clearTupleArray.sort(function (a, b) {
         return a-b
     });
@@ -48,7 +47,7 @@ function getData(countingFunction, clearText, encryptedTextA) {
 
     let arrayOfData = [];
     for (let c=0; c < 26; c++) {
-        arrayOfData.push([c, 100*encTupleArray[c]/encWithNoSpaces.length, 100*clearTupleArray[c]/clearWithNoSpaces.length]);
+        arrayOfData.push([26-c, 100*encTupleArray[c]/encWithNoSpaces.length, 100*clearTupleArray[c]/clearWithNoSpaces.length]);
     }
     return arrayOfData;
 }
