@@ -167,16 +167,20 @@ function displaySorted(map) {
     var limitTop = 6;
     var output = "";
 
+    let sum = 0;
+    var tupleArray = [];
+    for (var key in map) tupleArray.push([key, map[key]]);
+    tupleArray.forEach(function (el) {
+        sum += el[1];
+    });
+
     Object.keys(map).some(function(key) {
-        // console.log(key, map[key]);
-        output += `${key} : ${map[key]}   `;
+        output += `${key} : ${(100*map[key]/sum).toFixed(3)}&nbsp;&nbsp;&nbsp;&nbsp`;
         limitTop--;
         if (limitTop <= 0) {
             return output;
         }
     });
-     
-    // var output = JSON.stringify(map);
 
     return output;
 }
