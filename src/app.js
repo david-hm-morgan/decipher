@@ -35,19 +35,21 @@ var htmlOutput = "<meta http-equiv=\"refresh\" content=\"15\">";
 
 htmlOutput += "<script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>"
 
-// htmlOutput += `<script type=\"text/javascript\">${chartTools.getPreppedData(frequencyTools.getSingleFreqAnalyser(), frequencyTools.clearComparisonText, encryptedTextA)};${chartTools.getCharter()}</script>`;
+htmlOutput += `<script type=\"text/javascript\">${chartTools.getPreppedData(frequencyTools.getSingleFreqAnalyser(), frequencyTools.clearComparisonText, encryptedTextA)};${chartTools.getCharter()}</script>`;
 
 htmlOutput += "<script type=\"text/javascript\">google.charts.load('current', {packages: ['corechart', 'bar']});google.charts.setOnLoadCallback(drawMultSeries);</script>";
 
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 
 let lengthA = encryptedTextA.replace(/ /g, "").length;
+// let clearComparisonText = 
 
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
 
 htmlOutput += `<tr><td>Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
+htmlOutput += `<tr><td>Length = ${frequencyTools.clearComparisonText().length}<br>Index of coincidence = ${coincidence(frequencyTools.clearComparisonText())}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
 htmlOutput += "</table>";
