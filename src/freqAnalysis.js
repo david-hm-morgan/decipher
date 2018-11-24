@@ -215,5 +215,8 @@ module.exports = {
     },
     clearSorter: function() {
         return sortThisStuff(sampleClearText);
+    },
+    clearComparisonText: function() {
+        return sampleClearText;
     }
 }

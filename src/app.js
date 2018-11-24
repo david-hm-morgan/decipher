@@ -34,10 +34,8 @@ var coincidence = coincidenceTools.getindexOfCoincidence();
 var htmlOutput = "<meta http-equiv=\"refresh\" content=\"15\">";
 
 htmlOutput += "<script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>"
-// htmlOutput += "<script type=\"text/javascript\" src=\"/chart.js\"></script>"
 
-htmlOutput += "<div id=\"chart_div\"></div>";
-htmlOutput += `<script type=\"text/javascript\">${chartTools.getCharter()}</script>`;
+// htmlOutput += `<script type=\"text/javascript\">${chartTools.getPreppedData(frequencyTools.getSingleFreqAnalyser(), frequencyTools.clearComparisonText, encryptedTextA)};${chartTools.getCharter()}</script>`;
 
 htmlOutput += "<script type=\"text/javascript\">google.charts.load('current', {packages: ['corechart', 'bar']});google.charts.setOnLoadCallback(drawMultSeries);</script>";
 
@@ -53,6 +51,9 @@ htmlOutput += `<td><code>${frequencyA}</code></td>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
 htmlOutput += "</table>";
+
+htmlOutput += "<div id=\"chart_div\"></div>";
+
 
 
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
