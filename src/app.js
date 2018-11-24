@@ -8,6 +8,7 @@ const decoderTools = require('./decoder');
 const transposerTools = require('./transposer');
 const coincidenceTools = require('./coincidence');
 const reverserTools = require('./reverser');
+const chartTools = require('./chart');
 
 var transposerFunction = transposerTools.getTransposer();
 
@@ -31,11 +32,23 @@ var frequencyOfClear = frequencyTools.clearSorter();
 var coincidence = coincidenceTools.getindexOfCoincidence();
 
 var htmlOutput = "<meta http-equiv=\"refresh\" content=\"15\">";
+
+htmlOutput += "<script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>"
+// htmlOutput += "<script type=\"text/javascript\" src=\"/chart.js\"></script>"
+
+htmlOutput += "<div id=\"chart_div\"></div>";
+htmlOutput += `<script type=\"text/javascript\">${chartTools.getCharter()}</script>`;
+
+htmlOutput += "<script type=\"text/javascript\">google.charts.load('current', {packages: ['corechart', 'bar']});google.charts.setOnLoadCallback(drawMultSeries);</script>";
+
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
+
+let lengthA = encryptedTextA.replace(/ /g, "").length;
+
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
 
-htmlOutput += `<tr><td>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
+htmlOutput += `<tr><td>Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
