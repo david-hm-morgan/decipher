@@ -9,6 +9,7 @@ const transposerTools = require('./transposer');
 const coincidenceTools = require('./coincidence');
 const reverserTools = require('./reverser');
 const chartTools = require('./chart');
+const formatter = require('./formatting');
 
 var transposerFunction = transposerTools.getTransposer();
 
@@ -42,7 +43,6 @@ htmlOutput += "<script type=\"text/javascript\">google.charts.load('current', {p
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
 
 let lengthA = encryptedTextA.replace(/ /g, "").length;
-// let clearComparisonText = 
 
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
@@ -51,6 +51,10 @@ htmlOutput += `<tr><td>Length = ${lengthA}<br>Index of coincidence = ${coinciden
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
 htmlOutput += `<tr><td>Length = ${frequencyTools.clearComparisonText().length}<br>Index of coincidence = ${coincidence(frequencyTools.clearComparisonText())}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
+
+let formattingFunction = formatter.getFormatter();
+var formatted = formattingFunction(6, encryptedTextA);
+htmlOutput += `<tr><td><code>${formatted}</code></td></tr>`;
 
 htmlOutput += "</table>";
 
