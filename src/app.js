@@ -14,6 +14,8 @@ const formatter = require('./formatting');
 var transposerFunction = transposerTools.getTransposer();
 
 var reverserFunction = reverserTools.getReverser();
+var columnizerFunction = formatter.getColumnizer();
+var formattingFunction = formatter.getFormatter();
 
 var decoderFunction = decoderTools.getDecoder();
 var sorterFunction = frequencyTools.sorter();
@@ -21,6 +23,7 @@ var sorterFunction = frequencyTools.sorter();
 var keyA = currentPuzzleA.getKey();
 var keyB = currentPuzzleB.getKey();
 let encryptedTextA = currentPuzzleA.getEncryptedText();
+// encryptedTextA = columnizerFunction(7, encryptedTextA);
 let encryptedTextB = currentPuzzleB.getEncryptedText();
 
 var decoderOutputA = decoderFunction(encryptedTextA, keyA);
@@ -47,12 +50,9 @@ let lengthA = encryptedTextA.replace(/ /g, "").length;
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
 
-htmlOutput += `<tr><td>Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
+htmlOutput += `<tr><td>Standard English Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
-htmlOutput += `<tr><td>Length = ${frequencyTools.clearComparisonText().length}<br>Index of coincidence = ${coincidence(frequencyTools.clearComparisonText())}</td></td></tr>`;
-htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
 
-let formattingFunction = formatter.getFormatter();
 var formatted = formattingFunction(6, encryptedTextA);
 htmlOutput += `<tr><td><code>${formatted}</code></td></tr>`;
 
@@ -68,8 +68,7 @@ htmlOutput += `<td><code>${decoderOutputB}</code></td></tr>`
 
 htmlOutput += `<tr><td>Index of coincidence = ${coincidence(encryptedTextB)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyB}</code></td>`;
-htmlOutput += `<td><code>${frequencyOfClear}</code></td>`;
-
+htmlOutput += `<tr><td>Length = ${frequencyTools.clearComparisonText().length}<br>Index of coincidence = ${coincidence(frequencyTools.clearComparisonText())}</td></td></tr>`;
 htmlOutput += "</table>";
 
 htmlOutput += `<a href="https://www.dcode.fr/frequency-analysis">Frequency Analysis website</a> `;
