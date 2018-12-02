@@ -23,11 +23,11 @@ var sorterFunction = frequencyTools.sorter();
 var keyA = currentPuzzleA.getKey();
 var keyB = currentPuzzleB.getKey();
 let encryptedTextA = currentPuzzleA.getEncryptedText();
-// encryptedTextA = columnizerFunction(7, encryptedTextA);
 let encryptedTextB = currentPuzzleB.getEncryptedText();
+// encryptedTextB = formatByColumns(7, encryptedTextB);
 
 var decoderOutputA = decoderFunction(encryptedTextA, keyA);
-var decoderOutputB = transposerFunction(encryptedTextB, "21543");
+var decoderOutputB = transposerFunction(encryptedTextB, "5672183");
 
 var frequencyA = sorterFunction(encryptedTextA);
 var frequencyB = sorterFunction(encryptedTextB);
@@ -50,7 +50,7 @@ let lengthA = encryptedTextA.replace(/ /g, "").length;
 htmlOutput += `<tr><td><code>${encryptedTextA}</code></td>`
 htmlOutput += `<td><code>${decoderOutputA}</code></td></tr>`
 
-htmlOutput += `<tr><td>Standard English Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
+htmlOutput += `<tr><td>Length = ${lengthA}<br>Index of coincidence = ${coincidence(encryptedTextA)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyA}</code></td>`;
 
 var formatted = formattingFunction(6, encryptedTextA);
@@ -63,12 +63,17 @@ htmlOutput += "<div id=\"chart_div\"></div>";
 
 
 htmlOutput += "<table><th>Encrypted Text</th><th>Decrypted Text</th>";
+let lengthB = encryptedTextB.replace(/ /g, "").length;
+
 htmlOutput += `<tr><td><code>${encryptedTextB}</code></td>`
 htmlOutput += `<td><code>${decoderOutputB}</code></td></tr>`
 
-htmlOutput += `<tr><td>Index of coincidence = ${coincidence(encryptedTextB)}</td></td></tr>`;
+htmlOutput += `<tr><td>Length = ${lengthB}<br>Index of coincidence = ${coincidence(encryptedTextB)}</td></td></tr>`;
 htmlOutput += `<td><code>${frequencyB}</code></td>`;
 htmlOutput += `<tr><td>Length = ${frequencyTools.clearComparisonText().length}<br>Index of coincidence = ${coincidence(frequencyTools.clearComparisonText())}</td></td></tr>`;
+
+var formattedB = formattingFunction(7, encryptedTextB);
+htmlOutput += `<tr><td><code>${formattedB}</code></td></tr>`;
 htmlOutput += "</table>";
 
 htmlOutput += `<a href="https://www.dcode.fr/frequency-analysis">Frequency Analysis website</a> `;
