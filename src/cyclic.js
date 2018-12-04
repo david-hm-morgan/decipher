@@ -11,5 +11,12 @@ function createTranslationFromShift(xShift) {
 }
 
 // temp test
-console.log(`${createTranslationFromShift(1)}`);
-console.log(`${createTranslationFromShift(25)}`);
+console.log(`${createTable()}`);
+
+function createTable() {
+    let table = [];
+    for (let row = 0; row < baseKey.length; row++) {
+        table[row] = createTranslationFromShift(row);
+    }
+    return table;
+}
