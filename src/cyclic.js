@@ -1,7 +1,7 @@
 const baseKey = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 
 function createTranslationFromShift(xShift) {
-    console.log(`${xShift}`)
+    // console.log(`${xShift}`)
     let output = "";
     for (let c=0; c < baseKey.length; c++) {
         let offset = (c + xShift) % baseKey.length;
